@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button>9a</button>
+  <button class="js-9b">9b</button>
+
+
+  <button onclick="clickButton('heads')">heads</button>
+  <button onclick="clickButton('tails')">tails</button>
+  <p class="js-paragraph"></p>
+
+  <input placeholder="Input your name" class="js-input" onkeydown="tapKeyEnter(event)" onkeyup="releaseKey(event)">
+  <button onclick="submitName()">Submit</button>
+  <p class="js-key"></p>
+  <p class="js-text"></p>
+
+
+
+
+  <script>
+   console.log(document.querySelector('button')) 
+   document.querySelector('.js-9b').innerText = '9b done'
+
+   function clickButton (e){
+    document.querySelector('.js-paragraph').innerHTML = `You chose: ${e}`
+   }
+
+    function tapKeyEnter (event){
+        if(event.key === 'Enter'){
+          submitName()
+        }
+    }
+
+    function releaseKey (){
+      const nameInputElement = document.querySelector('.js-input');
+      let name = nameInputElement.value;
+      document.querySelector('.js-key').innerHTML = name;
+    }
+
+   function submitName(){
+    const nameInputElement = document.querySelector('.js-input');
+    let name = nameInputElement.value;
+    document.querySelector('.js-text').innerHTML = `Your name is : ${name}`
+   }
+
+   
+   
+
+
+
+
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Calculator</title>
+  </head>
+
+  <body>
+    <p class="js-display" ></p>
+    <p>
+      <button onclick="calculationFunc('1')">1</button>
+      <button onclick="calculationFunc('2')">2</button>
+      <button onclick="calculationFunc('3')">3</button>
+      <button onclick="calculationFunc('+')">+</button>
+    </p>
+    <p>
+      <button onclick="calculationFunc('4')">4</button>
+      <button onclick="calculationFunc('5')">5</button>
+      <button onclick="calculationFunc('6')">6</button>
+      <button onclick="calculationFunc('-')">-</button>
+    </p>
+    <p>
+      <button onclick="calculationFunc('7')">7</button>
+      <button onclick="calculationFunc('8')">8</button>
+      <button onclick="calculationFunc('9')">9</button>
+      <button onclick="calculationFunc('*')">*</button>
+    </p>
+    <p>
+      <button onclick="calculationFunc('0')">0</button>
+      <button onclick="calculationFunc('.')">.</button>
+      <button onclick="calculation= eval(calculation); displayCalculator(); saveCalculation()">=</button>
+      <button onclick="calculationFunc('/')">/</button>
+
+    </p>
+    <button
+      onclick="calculation='';displayCalculator();localStorage.removeItem('calculation',calculation)">Clear</button>
+
+
+
+    <script>
+
+      let calculation = localStorage.getItem('calculation') || '';
+
+      displayCalculator();
+
+      function calculationFunc (value) {
+        calculation += value;
+        displayCalculator();
+      };
+
+      function saveCalculation () {
+        localStorage.setItem('calculation', calculation);
+      }
+
+      function displayCalculator(){
+        document.querySelector('.js-display').innerHTML = calculation;
+      }
+
+
+
+    </script>
+
+  </body>
+
+</html>

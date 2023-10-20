@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Exercise</title>
+  </head>
+
+  <body>
+    <script>
+      // const nums = [10, 20, 30];
+      // nums[2] = 99;
+      // console.log(nums);
+
+      // function getLastValue (array) {
+      //   return array[array.length - 1];
+      // }
+      // console.log(getLastValue([1, 20, 22, 24, 5]));
+      // console.log(getLastValue(['hi', 'hello', 'good']))
+
+      // function arraySwap(array){
+      //   let firstValue = array[0];
+      //   let lastValue = array[array.length - 1]
+      //   array[0]= lastValue;
+      //   array[array.length - 1] = firstValue;
+      //   return array;
+      // }
+      // console.log(arraySwap([1,20,22,24,5]));
+      // console.log(arraySwap(['hi', 'hello', 'good']))
+
+      // for(let i = 0; i <= 10; i += 2){
+
+      // }
+
+      // for(let i = 5; i >= 0; i--){
+
+      // }
+
+      // let i = 0;
+      // while(i <= 10){
+      //   i += 2;
+      // }
+
+      //  i = 0;
+      // while(1 >= 0){
+      //   i--;
+      // }
+
+
+      //  i = 0;
+      // while(i < array.length){
+      //   array[i] += 1;
+      //   return array      
+      // }
+
+      // const newArray = [];
+      // const array= [1,2,3]
+
+      // for(let i = 0; i< array.length; i++){
+      //   newArray.push(array[i] + 1) ;
+      // }
+      // console.log(newArray);
+
+
+      // function addOne(array){
+      //   const newArray = [];
+      //   for(let i = 0; i < array.length; i++){
+      //     newArray.push(array[i]+1);
+      //   }
+      //   return newArray;
+      // }
+      // addOne([1,2,3]);
+      // console.log(addOne([1, 2, 3]));
+      // console.log(addOne([-2, -1, 0, 99]));
+
+
+      // function addArrays (array1, array2) {
+      //   const newArray = [];
+      //   for (let i = 0; i < array1.length; i++) {
+
+      //     newArray.push(array1[i] + array2[i]);
+      //   }
+      //   return newArray;
+      // }
+      // console.log(addArrays([1, 1, 2], [1, 1, 3]));
+      // console.log(addArrays([1, 2, 3], [4, 5, 6]));
+
+      // function addNUm(array,num){
+      //   const newArray = [];
+      //   for(let i = 0; i < array.length;i++){
+      //     newArray.push(array[i]+num)
+      //   }
+      //   return newArray;
+      // }
+      // addNUm([1,2,3],2);
+      // console.log(addNUm([1, 2, 3], 2))；
+      // console.log(addNUm([1, 2, 3], 3))；
+      // console.log(addNUm([-2, -1, 0, 99], 2))；
+
+      // function countPositive(nums){
+      //   let numMoreThanOne = 0;
+      //   for(let i = 0; i<nums.length; i++){
+      //     if (nums[i]>0){
+      //       numMoreThanOne++;
+      //     }
+      //   }
+      //   return numMoreThanOne;
+      // }
+      // console.log(countPositive([1,-3,5]));
+      // console.log(countPositive([-2,3,-5,7,10]));
+
+
+      // function minMax (nums) {
+      //   const result = {
+      //     min: '',
+      //     max: ''
+      //   };
+      //   let min = null;
+      //   let max = null;
+      //   for (let i = 0; i < nums.length; i++) {
+      //     if (min === null || nums[i] < min) {
+      //       min = nums[i];
+      //     }
+      //     if (max === null || nums[i] > max) {
+      //       max = nums[i];
+      //     }
+      //   }
+      //   result.min = min;
+      //   result.max = max;
+      //   return result;
+      // }
+      // console.log(minMax([]));
+      // console.log(minMax([-2, 3, -5, 7, 10]));
+      // console.log(minMax([3]));
+
+      // 11n.
+      // function countWords(words){
+      //   const result = {};
+      //   for(let i = 0; i<words.length; i++){
+      //     const word = words[i];
+
+      //     if(result[word]){
+      //       result[word]++; 
+      //     }else{
+      //       result[word] = 1;
+      //     }
+      //   }
+      //   return result;
+      // }
+      // console.log(countWords(['apple', 'grape', 'apple', 'apple']))
+
+
+
+      // function searchArray (array) {
+      //   let num = -1;
+      //   for (let i = 0; i < array.length; i++){
+      //     if(array[i]==='search'){
+      //       num = i; 
+      //       break;          
+      //     }
+      //   }
+      //   return num;        
+      // }
+      // console.log(searchArray(['hello','world','search','good','search']))
+      // console.log(searchArray(['not','found']))
+
+      // function findIndex(array,word){
+      //   let result = -1;
+      //   for(let i = 0; i<array.length;i++){
+      //     if(array[i]===word){
+      //       result = i;
+      //       break;
+      //     }
+      //   }
+      //   return result;
+      // }
+      // console.log(findIndex(['green','red', 'blue', 'red'], 'red'));
+      // console.log(findIndex(['green','red', 'blue', 'red'], 'yellow'))
+
+      // function removeEgg (foods) {
+      //   const result = [];
+      //   let num = 0;
+      //   const reverseArray = foods.slice().reverse();
+      //   console.log(reverseArray);
+      //   console.log(foods)
+      //   for (let i = 0; i < foods.length; i++) {          
+          
+      //     if (reverseArray[i] === 'egg'&&num<2) {
+      //       num++;
+      //       continue;
+      //     }
+      //     result.push(reverseArray[i]);
+      //   }
+      //   return result.reverse();
+      // }
+      // console.log(removeEgg(['egg', 'apple', 'egg', 'egg', 'ham']))
+
+      
+        // for(let i = 1; i<=20;i++){
+        //   if(i%3===0 && i%5===0){
+        //     console.log('FizzBuzz')
+        //   } else if(i%3===0){
+        //     console.log('Fizz')
+        //   }else if(i%5===0){
+        //     console.log('Buzz')
+        //   }else{
+        //     console.log(i);
+        //   }      
+        // }
+
+
+      function findIndex(array,word){
+        let result = -1;
+        for(let i = 0; i<array.length;i++){
+          if(array[i]===word){
+            result = i;
+            break;
+          }
+        }
+        return result;
+      }
+        console.log(findIndex(['green','red', 'blue', 'red'], 'red'));
+        console.log(findIndex(['green','red', 'blue', 'red'], 'yellow'))
+
+        function unique(array){
+
+        }
+
+
+        
+
+
+       
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+
+</html>
