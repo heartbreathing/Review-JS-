@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<head>
+  <title>App</title>
+</head>
+
+<body>
+  <button class="js-finished-button" onclick="twiceChange()">Hello</button>
+
+  <button onclick="addToCart()">Add to cart</button>
+  <p class="js-message"></p>
+
+  <button onclick="messages++; displayNotification();">Add</button>
+  <button onclick="if(messages>0){
+    messages--;
+    if(messages===0){
+      stopNotification();
+    }
+  } ">Remove</button>
+
+  <script>
+    // const add = function () {
+    //   console.log(2 + 3);
+    // };
+    // add();
+    // add();
+
+    // function runTwice (fun) {
+    //   fun();
+    //   fun();
+    // }
+    // runTwice(function () { console.log('12b'); });
+    // runTwice(add);
+
+    // function changeToFinished () {
+    //   setTimeout(function(){
+    //     document.querySelector('.js-finished-button').innerHTML = 'Finished'
+    //   }, 1000);
+    // }
+
+    // function twiceChange(){
+    //   document.querySelector('.js-finished-button').innerHTML = 'Loading...';
+    //   setTimeout(function(){
+    //     document.querySelector('.js-finished-button').innerHTML = 'Finished'
+    //   },1000)
+    // }
+
+    // let timeoutId;
+
+    // function addToCart(){
+    //   const message = document.querySelector('.js-message');
+    //   message.innerHTML = 'Added';
+
+    //   clearTimeout(timeoutId);
+
+    //   timeoutId = setTimeout(function(){
+    //     message.innerHTML = ''
+    //   },2000)
+
+    // }
+
+
+
+    // setInterval(function(){
+    //   if(document.title === "App"){
+    //     document.title = '(2)New messages'
+    //   }else{
+    //     document.title ='App'
+    //   }
+    // },1000)
+
+    // let messages = 2;
+
+    // setInterval(function () {
+    //   if(messages>0){
+    //       if (document.title === "App") {
+    //       document.title =  `(${messages})New messages`;
+    //       } else {
+    //       document.title = 'App';
+    //     }
+    //   }else{
+    //     document.title = 'App'
+    //   }
+
+    // }, 1000)
+
+    let messages = 2;
+    let intervalId;
+    let isDisplayNotification;
+
+    displayNotification();
+
+    function displayNotification () {
+      if (isDisplayNotification) {
+        return;
+      }
+
+      isDisplayNotification = true;
+
+      intervalId = setInterval(function () {
+        if (document.title === 'App') {
+          document.title = `(${messages})New messages`;
+        } else {
+          document.title = 'App';
+        }
+      }, 1000);
+
+    }
+
+    function stopNotification(){
+      isDisplayNotification = false;
+      clearInterval(intervalId);
+      document.title ='App'
+    }
+
+
+
+
+
+
+  </script>
+</body>
