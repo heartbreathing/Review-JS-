@@ -11,23 +11,33 @@ renderTodoList();
 function renderTodoList () {
   let todoListHtml = '';
 
-  todos.forEach(function (todoItem, index) {
+  todos.forEach((todoItem) => {
     const { name, dueDate } = todoItem;
 
     const html = `
     <div>${name}</div>
     <div>${dueDate}</div>
-    <button onclick="
-    todos.splice(${index}, 1);
-    renderTodoList();      
-    " class="delete-todo-button">Delete</button>
+    <button class="delete-todo-button js-delete-todo-button">Delete</button>
     `;
     todoListHtml += html;
   });
 
-
   document.querySelector('.js-todos').innerHTML = todoListHtml;
+
+  document.querySelectorAll('.js-delete-todo-button').forEach((deleteButton, index) => {
+    deleteButton.addEventListener('click', () => {
+      todos.splice(index , 1);
+      renderTodoList(); 
+    })
+  })          
+  
 }
+
+  
+
+document.querySelector('.js-add-todo-button').addEventListener('click', () => {
+  addTodo();
+})
 
 function addTodo () {
   const name = document.querySelector('.js-inputTodo').value;
