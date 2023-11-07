@@ -43,7 +43,7 @@ function addTodo () {
   const name = document.querySelector('.js-inputTodo').value;
 
   const dueDate = document.querySelector('.js-due-date-input').value;
-  // localStorage.setItem('todos', Number(todo));
+ 
   todos.push({
     name,
     dueDate,
